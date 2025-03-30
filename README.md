@@ -76,27 +76,7 @@ streamlit run main.py
 
 ### 🖼 Preview
 ---
-```html
-<div class="slider">
-  <img src="images/image1.png" width="300" height="200">
-  <img src="images/image2.png" width="300" height="200">
-  <img src="images/image3.png" width="300" height="200">
-  <img src="images/image4.png" width="300" height="200">
-  <img src="images/image5.png" width="300" height="200">
-  <img src="images/image6.png" width="300" height="200">
-</div>
-<style>
-  .slider {
-    display: flex;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-  }
-  .slider img {
-    scroll-snap-align: start;
-    margin-right: 10px;
-  }
-</style>
-```
+![Image Slider](images/slider.gif)
 ---
 ## 📜 License
 This project is licensed under the terms of the `LICENSE` file included in the repository.
