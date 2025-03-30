@@ -76,6 +76,7 @@ streamlit run main.py
 
 ### 🖼 Preview
 ---
+```html
 <div class="slider">
   <img src="images/image1.png" width="300" height="200">
   <img src="images/image2.png" width="300" height="200">
@@ -95,7 +96,7 @@ streamlit run main.py
     margin-right: 10px;
   }
 </style>
-
+```
 ---
 ## 📜 License
 This project is licensed under the terms of the `LICENSE` file included in the repository.
