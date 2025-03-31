@@ -62,7 +62,21 @@ Start the Ollama model:
 ```sh
 ollama run mistral
 ```
-### 5️⃣ Run the Application
+### 5️⃣ Configure Environment Variables
+Create a `.env` file in the root directory and add the following credentials:
+```
+POSTGRES_URL="postgresql+psycopg://ai:ai@localhost:5532/ai"
+TWITTER_BEARER_TOKEN="your_twitter_bearer_token"
+REDDIT_CLIENT_ID="your_reddit_client_id"
+REDDIT_CLIENT_SECRET="your_reddit_client_secret"
+NASA_API_KEY="your_nasa_api_key"
+INDIAN_NEWS_API_KEY="your_indian_news_api_key"
+FACT_CHECKING_API_KEY="your_fact_checking_api_key"
+DEFAULT_LANGUAGE="en"
+```
+Ensure you replace the placeholder values with your actual API keys.
+
+### 6️⃣ Run the Application
 ```sh
 streamlit run main.py
 ```
