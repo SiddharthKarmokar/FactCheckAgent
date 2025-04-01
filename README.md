@@ -60,7 +60,7 @@ curl -fsSL https://ollama.ai/install.sh | sh
 ```
 Start the Ollama model:
 ```sh
-ollama run mistral
+ollama run llama3.2
 ```
 ### 5️⃣ Configure Environment Variables
 Create a `.env` file in the root directory and add the following credentials:
