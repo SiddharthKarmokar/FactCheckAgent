@@ -190,3 +190,222 @@
 [2025-03-31 04:49:49,492: INFO: generate_image: Generating image for prompt: Disney's new Snow White Live Action is a Success]
 [2025-03-31 04:49:49,493: INFO: generate_image: Image successfully generated: https://image.pollinations.ai/prompt/Disney's new Snow White Live Action is a Success]
 [2025-03-31 04:49:49,494: INFO: main: Fact-checking blog generation completed]
+[2025-04-01 18:52:10,673: INFO: main: Fact-checking process started]
+[2025-04-01 18:52:10,674: INFO: main: Topic: Disney's new Snow White Live Action is a Success]
+[2025-04-01 18:53:23,796: INFO: _client: HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"]
+[2025-04-01 18:53:25,327: INFO: _client: HTTP Request: POST https://api.phidata.com/v1/telemetry/agent/run/create "HTTP/1.1 200 OK"]
+[2025-04-01 18:53:25,329: INFO: get_sources:  {
+	"sources": {
+		"reddit": 10,
+		"arxiv": 9,
+		"indian_sources": 8,
+		"duckduckgo": 7,
+		"nasa": 6,
+		"x": 5
+	}
+}
+
+
+Consider the following conditions: 
+1. All sources have a score based on relevance of their news content to 'Disney's new Snow White Live Action'.
+2. Each source can only be used once.
+3. A source is considered highly relevant if its score is greater than or equal to 8.
+4. No two sources with the same name should be used.
+5. The total score for a list of sources can never exceed 21. 
+6. The 'arxiv' and 'nasa' sources have been given specific scores because they cover academic and space-related news respectively, which is more likely to be relevant in this case.
+
+Question: What are the scores for each source?
+
+
+Start by assigning the known scores: "reddit" = 10, "arxiv" = 9, "nasa" = 6. This brings the total score of 21.
+
+To meet the condition that no two sources with the same name should be used and also to ensure a balanced distribution of the score, let's assign 7 to 'duckduckgo', 5 to 'x' (as it is the only one left), 8 to 'indian_sources' and finally 6 to 'reddit'.
+
+Proof by contradiction: If we were to use two of the same named sources, say "arxiv" and "nasa", the total score would exceed 21. This contradicts our given condition. Hence, the scores assigned must be unique across different names.
+
+Direct proof: The total score is indeed 21 as per step 2, satisfying all other conditions. So, this proves that the assignment of these scores works in this scenario. 
+
+Property of transitivity: If a source's relevance is greater than or equal to 8 (condition 3), and it has a score above 6 (condition 5), then its name should not be used more than once. Therefore, we've adhered to this property throughout our solution. 
+
+Inductive logic: Our strategy of assigning scores based on relevance while considering the other conditions could apply to future problems with similar constraints. This step validates our approach for problem-solving.
+Answer: The sources' scores are as follows - 'reddit': 10, 'arxiv': 9, 'nasa': 6, 'duckduckgo': 7, 'indian_sources': 8, and 'x': 5.
+]
+[2025-04-01 18:53:25,333: ERROR: get_sources: Error decoding JSON: Extra data: line 13 column 1 (char 118)]
+[2025-04-01 18:53:25,335: INFO: fetch_news: Fetching news for topic: Disney's new Snow White Live Action is a Success in language: en]
+[2025-04-01 18:53:25,336: WARNING: fetch_news: No sources provided, defaulting to all.]
+[2025-04-01 18:53:25,540: INFO: _client: HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 400 Bad Request"]
+[2025-04-01 18:58:47,381: INFO: main: Fact-checking process started]
+[2025-04-01 18:58:47,382: INFO: main: Topic: Disney's new Snow White is huge flop]
+[2025-04-01 18:59:00,773: INFO: _client: HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"]
+[2025-04-01 18:59:02,060: INFO: _client: HTTP Request: POST https://api.phidata.com/v1/telemetry/agent/run/create "HTTP/1.1 200 OK"]
+[2025-04-01 18:59:02,061: INFO: get_sources: ```json
+{
+  "sources": {
+    "duckduckgo": 8,
+    "x": 7,
+    " nasa": 6,
+    "reddit": 5,
+    "arxiv": 4,
+    "indian_sources": 3
+  }
+}
+```]
+[2025-04-01 18:59:02,061: ERROR: get_sources: Error decoding JSON: Expecting value: line 1 column 1 (char 0)]
+[2025-04-01 18:59:02,063: INFO: fetch_news: Fetching news for topic: Disney's new Snow White is huge flop in language: en]
+[2025-04-01 18:59:02,064: WARNING: fetch_news: No sources provided, defaulting to all.]
+[2025-04-01 18:59:02,395: INFO: _client: HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 400 Bad Request"]
+[2025-04-01 19:05:36,731: INFO: main: Fact-checking process started]
+[2025-04-01 19:05:36,732: INFO: main: Topic: Disney's new Snow White Live Action is a Success]
+[2025-04-01 19:06:00,881: INFO: _client: HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"]
+[2025-04-01 19:06:02,306: INFO: _client: HTTP Request: POST https://api.phidata.com/v1/telemetry/agent/run/create "HTTP/1.1 200 OK"]
+[2025-04-01 19:06:02,308: INFO: get_sources: ```json
+{
+    "sources": {
+        "source_name": "nasa"
+    }
+}
+```
+
+The output is a JSON object without explanations or additional text, formatted as: { 'sources': { 'source_name': relevance_score } } where `relevance_score` ranges from 0 to 10.]
+[2025-04-01 19:06:02,308: ERROR: get_sources: Error decoding JSON: Expecting value: line 1 column 1 (char 0)]
+[2025-04-01 19:06:02,311: INFO: fetch_news: Fetching news for topic: Disney's new Snow White Live Action is a Success in language: en]
+[2025-04-01 19:06:02,311: WARNING: fetch_news: No sources provided, defaulting to all.]
+[2025-04-01 19:06:02,617: INFO: _client: HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 400 Bad Request"]
+[2025-04-01 19:09:34,413: INFO: main: Fact-checking process started]
+[2025-04-01 19:09:34,413: INFO: main: Topic: Disney's new Snow White Live Action is a Success]
+[2025-04-01 19:09:55,674: INFO: _client: HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"]
+[2025-04-01 19:09:57,107: INFO: _client: HTTP Request: POST https://api.phidata.com/v1/telemetry/agent/run/create "HTTP/1.1 200 OK"]
+[2025-04-01 19:09:57,109: INFO: get_sources: ```json
+{
+  "sources": {
+    "x": 8,
+    "duckduckgo": 2,
+    "reddit": 9,
+    "nasa": 1,
+    "arxiv": 0
+  }
+}
+```
+Note: Nasa is likely to have very little relevance as Disney's Snow White live-action film release has no connection with NASA]
+[2025-04-01 19:09:57,110: ERROR: get_sources: Error decoding JSON: Expecting value: line 1 column 1 (char 0)]
+[2025-04-01 19:09:57,113: INFO: fetch_news: Fetching news for topic: Disney's new Snow White Live Action is a Success in language: en]
+[2025-04-01 19:09:57,114: WARNING: fetch_news: No sources provided, defaulting to all.]
+[2025-04-01 19:10:35,251: INFO: _client: HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"]
+[2025-04-01 19:10:35,561: INFO: lib: response: https://duckduckgo.com/?q=Disney+Snow+White+Live+Action+success 200]
+[2025-04-01 19:10:36,807: INFO: lib: response: https://duckduckgo.com/news.js?l=wt-wt&o=json&noamp=1&q=Disney+Snow+White+Live+Action+success&vqd=4-261230207068296307551482001692300524205&p=-1 200]
+[2025-04-01 19:10:36,811: INFO: __init__: Requesting page (first: True, try: 0): https://export.arxiv.org/api/query?search_query=&id_list=&sortBy=relevance&sortOrder=descending&start=0&max_results=100]
+[2025-04-01 19:10:38,228: INFO: __init__: Got empty first page; stopping generation]
+[2025-04-01 19:12:13,179: INFO: _client: HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"]
+[2025-04-01 19:12:14,795: INFO: _client: HTTP Request: POST https://api.phidata.com/v1/telemetry/agent/run/create "HTTP/1.1 200 OK"]
+[2025-04-01 19:12:23,379: INFO: fetch_news: Successfully fetched and processed news]
+[2025-04-01 19:12:23,381: INFO: generate_blog: Generating fact-checked blog for topic: Disney's new Snow White Live Action is a Success]
+[2025-04-01 19:16:04,864: INFO: _client: HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"]
+[2025-04-01 19:16:06,253: INFO: _client: HTTP Request: POST https://api.phidata.com/v1/telemetry/agent/run/create "HTTP/1.1 200 OK"]
+[2025-04-01 19:16:06,596: INFO: generate_blog: Translated blog content to en]
+[2025-04-01 19:16:06,596: INFO: generate_blog: Blog successfully generated]
+[2025-04-01 19:16:06,600: INFO: confidence_score: Calculated confidence score: 0.51]
+[2025-04-01 19:16:06,602: INFO: generate_image: Generating image for prompt: Disney's new Snow White Live Action is a Success]
+[2025-04-01 19:16:06,602: INFO: generate_image: Image successfully generated: https://image.pollinations.ai/prompt/Disney's new Snow White Live Action is a Success]
+[2025-04-01 19:16:07,403: INFO: main: Fact-checking blog generation completed]
+[2025-04-01 19:23:23,585: INFO: main: Fact-checking process started]
+[2025-04-01 19:23:23,585: INFO: main: Topic: Disney's new Snow White Live Action is a Success]
+[2025-04-01 19:23:48,265: INFO: _client: HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"]
+[2025-04-01 19:23:49,881: INFO: _client: HTTP Request: POST https://api.phidata.com/v1/telemetry/agent/run/create "HTTP/1.1 200 OK"]
+[2025-04-01 19:23:49,883: INFO: get_sources: Raw Response: ```
+{
+  "sources": {
+    "duckduckgo": 4,
+    "reddit": 9,
+    "nasa": 1,
+    "arxiv": 0,
+    "x": 0
+  }
+}
+```]
+[2025-04-01 19:23:49,885: ERROR: get_sources: Error decoding JSON or processing response: Expecting value: line 1 column 1 (char 0)]
+[2025-04-01 19:23:49,888: INFO: fetch_news: Fetching news for topic: Disney's new Snow White Live Action is a Success in language: en]
+[2025-04-01 19:23:49,890: WARNING: fetch_news: No sources provided, defaulting to all.]
+[2025-04-01 19:24:32,750: INFO: _client: HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"]
+[2025-04-01 19:24:33,027: INFO: lib: response: https://duckduckgo.com/?q=Disney+Snow+White+Live+Action+success 200]
+[2025-04-01 19:24:34,521: INFO: lib: response: https://duckduckgo.com/news.js?l=wt-wt&o=json&noamp=1&q=Disney+Snow+White+Live+Action+success&vqd=4-261230207068296307551482001692300524205&p=-1 200]
+[2025-04-01 19:26:24,910: INFO: _client: HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"]
+[2025-04-01 19:26:26,205: INFO: _client: HTTP Request: POST https://api.phidata.com/v1/telemetry/agent/run/create "HTTP/1.1 200 OK"]
+[2025-04-01 19:26:32,550: INFO: fetch_news: Successfully fetched and processed news]
+[2025-04-01 19:26:48,251: INFO: main: Fact-checking process started]
+[2025-04-01 19:26:48,252: INFO: main: Topic: Disney's new Snow White Live Action is a Success]
+[2025-04-01 19:27:10,693: INFO: _client: HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"]
+[2025-04-01 19:27:13,086: INFO: _client: HTTP Request: POST https://api.phidata.com/v1/telemetry/agent/run/create "HTTP/1.1 200 OK"]
+[2025-04-01 19:27:13,087: INFO: get_sources: Raw Response: ```
+{
+  "sources": {
+    "x": 0,
+    "nasa": 0,
+    "indian_sources": 3,
+    "duckduckgo": 8,
+    "reddit": 9,
+    "arxiv": 0
+  }
+}
+```]
+[2025-04-01 19:27:13,087: INFO: get_sources: Relevant Sources: {'indian_sources': 3, 'duckduckgo': 8, 'reddit': 9}]
+[2025-04-01 19:27:13,089: INFO: fetch_news: Fetching news for topic: Disney's new Snow White Live Action is a Success in language: en]
+[2025-04-01 19:27:13,089: ERROR: fetch_news: No news found from selected sources.]
+[2025-04-01 19:28:20,424: INFO: main: Fact-checking process started]
+[2025-04-01 19:28:20,425: INFO: main: Topic: Disney's new Snow White Live Action is a Success]
+[2025-04-01 19:28:26,401: INFO: _client: HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"]
+[2025-04-01 19:28:27,658: INFO: _client: HTTP Request: POST https://api.phidata.com/v1/telemetry/agent/run/create "HTTP/1.1 200 OK"]
+[2025-04-01 19:28:27,660: INFO: get_sources: Raw Response: ```
+{
+  "sources": {
+    "x": 2,
+    "nasa": 0,
+    "indian_sources": 8,
+    "duckduckgo": 6,
+    "reddit": 9
+  }
+}
+```]
+[2025-04-01 19:28:27,662: INFO: get_sources: Relevant Sources: {'indian_sources': 8, 'duckduckgo': 6, 'reddit': 9}]
+[2025-04-01 19:28:27,667: INFO: fetch_news: Fetching news for topic: Disney's new Snow White Live Action is a Success in language: en]
+[2025-04-01 19:29:03,378: INFO: _client: HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"]
+[2025-04-01 19:29:03,659: INFO: lib: response: https://duckduckgo.com/?q=Disney+Snow+White+Live+Action+success 200]
+[2025-04-01 19:29:05,109: INFO: lib: response: https://duckduckgo.com/news.js?l=wt-wt&o=json&noamp=1&q=Disney+Snow+White+Live+Action+success&vqd=4-261230207068296307551482001692300524205&p=-1 200]
+[2025-04-01 19:31:55,598: INFO: _client: HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"]
+[2025-04-01 19:31:56,956: INFO: _client: HTTP Request: POST https://api.phidata.com/v1/telemetry/agent/run/create "HTTP/1.1 200 OK"]
+[2025-04-01 19:31:59,186: INFO: fetch_news: Successfully fetched and processed news]
+[2025-04-01 19:31:59,188: INFO: generate_blog: Generating fact-checked blog for topic: Disney's new Snow White Live Action is a Success]
+[2025-04-01 19:32:04,075: INFO: _client: HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"]
+[2025-04-01 19:32:05,362: INFO: _client: HTTP Request: POST https://api.phidata.com/v1/telemetry/agent/run/create "HTTP/1.1 200 OK"]
+[2025-04-01 19:32:05,363: INFO: generate_blog: Translated blog content to en]
+[2025-04-01 19:32:05,364: INFO: generate_blog: Blog successfully generated]
+[2025-04-01 19:32:05,366: INFO: confidence_score: Calculated confidence score: 0.38]
+[2025-04-01 19:32:05,370: INFO: generate_image: Generating image for prompt: Disney's new Snow White Live Action is a Success]
+[2025-04-01 19:32:05,371: INFO: generate_image: Image successfully generated: https://image.pollinations.ai/prompt/Disney's new Snow White Live Action is a Success]
+[2025-04-01 19:32:05,505: INFO: main: Fact-checking blog generation completed]
+[2025-04-01 19:34:23,915: INFO: main: Fact-checking process started]
+[2025-04-01 19:34:23,916: INFO: main: Topic: Disney's new Snow White Live Action is a Success]
+[2025-04-01 19:34:49,245: INFO: _client: HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"]
+[2025-04-01 19:34:51,408: INFO: _client: HTTP Request: POST https://api.phidata.com/v1/telemetry/agent/run/create "HTTP/1.1 200 OK"]
+[2025-04-01 19:34:51,411: INFO: get_sources: Raw Response: ```
+{
+  "sources": {
+    "nasa": 0,
+    "duckduckgo": 0,
+    "indian_sources": 4,
+    "reddit": 7,
+    "arxiv": 0
+  }
+}
+```]
+[2025-04-01 19:34:51,413: INFO: get_sources: Relevant Sources: {'indian_sources': 4, 'reddit': 7}]
+[2025-04-01 19:34:51,418: INFO: fetch_news: Fetching news for topic: Disney's new Snow White Live Action is a Success in language: en]
+[2025-04-01 19:34:53,789: INFO: fetch_news: Successfully fetched and processed news]
+[2025-04-01 19:34:53,791: INFO: generate_blog: Generating fact-checked blog for topic: Disney's new Snow White Live Action is a Success]
+[2025-04-01 19:39:02,225: INFO: _client: HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"]
+[2025-04-01 19:39:03,808: INFO: _client: HTTP Request: POST https://api.phidata.com/v1/telemetry/agent/run/create "HTTP/1.1 200 OK"]
+[2025-04-01 19:39:04,094: INFO: generate_blog: Translated blog content to en]
+[2025-04-01 19:39:04,094: INFO: generate_blog: Blog successfully generated]
+[2025-04-01 19:39:04,097: INFO: confidence_score: Calculated confidence score: 0.38]
+[2025-04-01 19:39:04,099: INFO: generate_image: Generating image for prompt: Disney's new Snow White Live Action is a Success]
+[2025-04-01 19:39:04,100: INFO: generate_image: Image successfully generated: https://image.pollinations.ai/prompt/Disney's new Snow White Live Action is a Success]
+[2025-04-01 19:39:04,378: INFO: main: Fact-checking blog generation completed]

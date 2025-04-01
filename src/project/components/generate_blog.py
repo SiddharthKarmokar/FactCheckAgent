@@ -13,6 +13,7 @@ def generate_blog(summary, topic, sources, language="en"):
             "Cross-check facts and highlight inconsistencies. Provide an objective credibility score for each source."
             "Ensure the blog has an engaging introduction, key takeaways, and a strong conclusion."
             "Include a section listing the sources used for verification."
+            "Make sure that the conclusion properly illustrates the sentiment, if fact-check is creadible or not"
         )
         response = blog_writer.run(blog_prompt)
         blog_content = getattr(response, "content", str(response))

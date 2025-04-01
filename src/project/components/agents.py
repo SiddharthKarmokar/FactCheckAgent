@@ -11,7 +11,7 @@ source_storage = PgAgentStorage(table_name="source_selector", db_url=POSTGRES_UR
 
 source_selector = Agent(
     name="Source Selector",
-    model=Ollama(id="mistral"),
+    model=Ollama(id="llama3.2"),
     storage=source_storage,
     instructions=[
     "Analyze the given topic and determine the most relevant news sources.",
@@ -30,7 +30,7 @@ source_selector = Agent(
 
 news_agent = Agent(
     name="News Scraper",
-    model=Ollama(id="mistral"),  
+    model=Ollama(id="llama3.2"),  
     tools=[DuckDuckGo(), ArxivToolkit()],  
     storage=news_storage,
     instructions=[
@@ -45,7 +45,7 @@ news_agent = Agent(
 
 blog_writer = Agent(
     name="Fact-Checking Blog Writer",
-    model=Ollama(id="mistral"),
+    model=Ollama(id="llama3.2"),
     storage=blog_storage,
     instructions=[
         "Write a well-structured fact-checked blog post on the given topic using the provided summary and sources.",
